@@ -1,0 +1,284 @@
+/* PC,スマホ共通スタイル */
+body {
+	font-family: "Source Sans Pro","Hiragino Kaku Gothic ProN",Meiryo,Arial,Sans-serif;
+}
+/* bodyに  "Source Sans Pro","Hiragino Kaku Gothic ProN",Meiryo,Arial,Sans-serifのフォントを適用*/
+p {
+	font-size: 15px;
+}
+/* fontの大きさ15px */
+
+/*================
+ PC用のスタイル 
+=================*/
+/* 横幅設定 */
+body {
+	max-width: 1080px;
+	/* 最大横幅1080px */
+    min-width: 960px;
+	/*  最小横幅960px*/
+	/* 上記最大、最小幅は標準的数値 */
+
+    margin: 0 auto 0 auto;
+	/* マージン 上0 右auto 下0 左auto　左右をautoで中央寄せ */
+}
+  
+/* ヘッダー */
+header {
+    display: flex;
+	/* コンテナの親要素に設定 */
+    justify-content: space-between;
+	/* 各アイテムを均等に配置し最初のアイテムは先頭に寄せ、
+	　 最後のアイテムは末尾に寄せる */
+}
+
+  
+
+  /* ナビゲーションのレイアウト */
+  #nav-pc {
+    text-align: right;
+	/* テキスト右揃え */
+    font-size: 14px;
+	/* フォントサイズ14px */
+    padding-top: 15px;
+	/* padding上だけ15px */
+  }
+  
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-pc > a {
+    text-decoration: none;
+	/* テキストの装飾なし */
+    margin-left: 20px;
+   /* aタグのmargin 左側20px */
+  }
+  #nav-pc > a:link {
+    color: #0d0d0d;
+	/* aタグの色#0d0d0d */
+  }
+  #nav-pc > a:visited {
+    color: #0d0d0d;
+	/* aタグ押したら黒色 */
+  }
+  #nav-pc > a:hover {
+    color: #0d0d0d;
+	/* aタグカーソルが上にあれば黒色 */
+    text-decoration: underline;
+	/* aタグカーソルが上にあればアンダーライン */
+  }
+  #nav-pc > a:active {
+    color: #0d0d0d;
+	/* aタグを押してる際黒色 */
+  }
+   /* メインビジュアル*/
+   #main-visual {
+    position: relative;
+	/* sectionを親要素に設定 */
+    height: 400px;
+	/* sectionを高さ400pxに設定 */
+  }
+  /* メインメッセージ */
+  #main-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+	/* main-visual(section)の上0,左0のところに配置 */
+    background-color: #2710d5;
+	/* 背景色#2710d5 */
+    color: #ffffff;
+	/* 文字色#ffffff */
+    border-radius: 0 0 476px 0;
+	/* main-message(div)右下を円形 */
+    max-width: 620px;
+	/* 最大幅620px */
+    height: 100%;
+	/* 高さsectionの100％ */
+    width: 100%;
+	/* 幅sectionの100％ */
+    z-index: 11;
+	/* 画像重ねの下から11番目 */
+  }
+  #main-message > h1 {
+	font-size: 60px;
+	/* メインメッセージのフォントサイズ60px */
+	font-weight: bold;
+	/* 文字の太さ　太文字 */
+	margin:100px 0 0 50px ;
+	/* margin 上100px 右0 下0 左50px */
+  } 
+  #main-message > p {
+	font-size: 28px;
+	/* p要素のフォントサイズ28px */
+	margin: 0 0 0 50px;
+	/* margin 上0 右0 下0 左50px */
+  }
+  #main-visual > img {
+    max-width: 620px;
+	/* 幅最大620px */
+    border-radius: 476px 0 0 0;
+	/* 左上円形 */
+    position: absolute;
+    top: 0;
+    right: 0;
+	/* main-visual(section)の上0、右0に配置 */
+    z-index: 10;
+	/* 画像重ね下から10番目 */
+  }
+ 
+  /* 見出し */
+  h2 {
+    margin: 40px 0 0 0;
+	/* h2の上側に余白40px */
+  }
+  
+  h2::after {
+    content: url("images/line.png");
+	/* h2の後ろに画像 */
+    margin-left: 10px;
+	/* h2の右に余白10px */
+  }
+    h3 {
+    font-size: 27px;
+	/* h3のフォントサイズ27px */
+  }
+  /* ミッション */
+  #mission {
+    margin: 80px auto 80px auto;
+	/* mission(section)の上下余白80px 左右autoで中央配置 */
+    width: 100%;
+	/* 幅はbodyの100% */
+  }
+  
+  #mission-flex {
+    width: 100%;
+	/* 幅はsectionの100% */
+    display: flex;
+	/* mission-flex(div)を親コンテナに設定。
+	　初期値rowによりcontent左から並ぶ */
+  }
+  #mission-flex > div {
+    width: 50%;
+    margin: 20px;
+	/* 2このdivの(親要素=mission<section>)
+	幅親要素の50% :余白各20px */
+  }
+  
+  #mission-photo {
+    width: 100%;
+	/* 幅mission-flex(div)の100% */
+  }
+  
+  #s2dgs {
+    margin-top: 50px;
+	/* 上余白50px */
+    width: 100%;
+	/* 幅mission-flex(div)の100% */
+  }
+  /* プロダクト */
+  #product {
+    background-color: #fafafa;
+	/* 背景色#fafafa */
+    margin: 80px 0 80px 0;
+	/* 外余白　上下80px 左右0px */
+    padding: 10px 40px 0px 40px;
+	/* 内余白　上10px 右40px 下0px 左40px */
+
+  }
+  
+  /* 外枠 */
+  #product > div {
+    margin-top: 40px;
+	/* 外余白　上40px */
+    display: flex;
+	/* 親コンテナに設定 */
+  }
+  
+  /* 左のカラム */
+  #product-left {
+    width: 50%;
+	/* 幅　親divの50% */
+    margin-right: 20px;
+	/* 外余白右　20px */
+  }
+  
+  /* 右のカラム */
+  #product-right {
+    width: 50%;
+	/* 幅親divの50% */
+    margin-left: 20px;
+	/* 外左余白　20px */
+	margin-top: 80px;
+	/* 外余白上 80px */
+  }
+  
+  /* 画像＋説明の枠 */
+  #product-left > div {
+    position: relative;
+	/* product-left内divを位置決めの親に設定 */
+    height: 480px;
+	/* 高さ480px */
+    margin-right: 20px;
+	/* 余白右　20px */
+	
+  }
+  #product-right > div {
+    position: relative;
+	/* product-right内divを位置決めの親に設定 */
+    height: 480px;
+	/* 高さ480px */
+    margin-left: 20px;
+	/* 余白左　20px */
+  }
+    /* 画像 */
+	.product-photo {
+		width: 100%;
+	/* 幅を親divの100% */
+	  }
+  /* 説明文の枠 */
+  .product-explain {
+    background-color: #ffffff;
+	/* 背景色#ffffff */
+    position: absolute;
+    left: 0;
+    top: 280px;
+	/* 位置親divの上から280px 左0px */
+    margin: 0 40px 0 40px;
+	/* 外余白 上0 右40px 下0 左40px */
+    padding: 20px;
+	/* 内余白 20px */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+	/* 影　左右5px 上下5px　ぼかし10px 色と透明度  */
+  }
+  
+  /* 説明文の英語 */
+  .product-explain > span {
+    color: #2710d5;
+	/* 文字の色 */
+    font-weight: bold;
+	/* 文字の太さ */
+    font-size: 16px;
+	/* 文字の大きさ */
+    margin: 0;
+	/* 外余白 */
+  }
+  
+  /* 説明文の見出し */
+  .product-explain > h3 {
+    font-size: 20px;
+	/* 文字の大きさ */
+    margin: 5px 0 5px 0;
+	/* 外余白 上5px 右0px 下5px 左0px */
+  }
+  
+  /* 説明文 */
+  .product-explain > p {
+    font-size: 14px;
+	/* 文字大きさ */
+    margin: 0;
+	/* 外余白 */
+  }
+  
+  /* 「もっとみる」ボタン */
+  #product-more {
+    margin: 0 auto -42px auto;
+	/* 外余白　上0 下-42 左右autoで中央揃え */
+  }
