@@ -8,7 +8,7 @@ shintyouu=1.7;
 
 let bmi;
 
-bmi =taijyuu%(shintyouu*shintyouu)
+bmi =taijyuu/(shintyouu*shintyouu)
 
 console.log(bmi);
 
